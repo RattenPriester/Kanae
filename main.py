@@ -6,7 +6,6 @@ import logging
 import json
 import traceback
 
-
 from discord.ext import commands
 
 
@@ -133,4 +132,4 @@ class DiscordBot(commands.Bot):
             await self.tree.sync(guild=MY_GUILD)
 
 bot = DiscordBot()
-bot.run("INSERT_TOKEN")
+bot.run(config ["TOKEN"])

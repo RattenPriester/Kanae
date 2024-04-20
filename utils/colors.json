@@ -1,17 +1,15 @@
 {
-    "red": "",
-    "dark_red": "",
-    "blue": "",
-    "dark_blue": "",
-    "green": "",
-    "dark_green": "",
-    "yellow": "",
-    "dark_yellow": "",
-    "purple": "",
+    "red": "0xff0000",
+    "dark_red": "0x990000",
+    "blue": "0x0008ff",
+    "dark_blue": "0x000b97",
+    "green": "0x00ff1f",
+    "dark_green": "0x009e13",
+    "yellow": "0xffff00",
+    "dark_yellow": "0xc8c800",
+    "purple": "0xb200ff",
     "dark_purple": "",
-    "pink": "",
-    "dark_pink": "",
-    "rosa": "",
-    "dark_rosa": "",
-    "": ""
+    "pink": "0x7400a6",
+    "dark_pink": "a00082"
+
 }
