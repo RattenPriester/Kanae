@@ -89,17 +89,6 @@ class DiscordBot(commands.Bot):
         self.config = config
 
 
-#@bot.event
-#async def on_ready():
-#    print(f"\nLogged in as: {bot.user.name} \n")
-#    print(f"Bot id: {bot.user.id} \n")
-#    for guild in bot.guilds:
-#        guild_count = len(bot.guilds)
-#        print(f"guild Informations: \n   {guild.name} \n   Owner: {guild.owner.name} \n   Member Count: {guild.member_count} \n   guild id:{guild.id} \n")
-#    print(f"{bot.user.name} is on {guild_count} servers \n")
-#    print(f"Python Version: {platform.python_version()}")
-
-
     async def load_cogs(self) -> None:
         """
         The code in this function is executed whenever the bot will start.
