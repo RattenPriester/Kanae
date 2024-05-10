@@ -4,9 +4,9 @@ import discord
 import platform
 import logging
 import json
-import traceback
 
-from discord.ext import commands
+
+from discord.ext import commands, tasks
 
 
 intents = discord.Intents.all()
@@ -116,9 +116,14 @@ class DiscordBot(commands.Bot):
                 f"Running on: {platform.system()} {platform.release()} ({os.name})"
             )
             self.logger.info("-------------------")
+            
             await self.load_cogs()
+            
             self.tree.copy_global_to(guild=MY_GUILD)
             await self.tree.sync(guild=MY_GUILD)
+
+
+
 
 bot = DiscordBot()
 bot.run(config ["TOKEN"])
