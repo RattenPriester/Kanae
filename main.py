@@ -5,12 +5,7 @@ import platform
 import logging
 import json
 
-
-from discord.ext import commands, tasks
-
-
-intents = discord.Intents.all()
-MY_GUILD = discord.Object(id=511246149026578462)
+from discord.ext import commands
 
 
 
@@ -68,12 +63,13 @@ file_handler.setFormatter(file_handler_formatter)
 logger.addHandler(console_handler)
 logger.addHandler(file_handler)
 
-
+intents = discord.Intents.all()
+MY_GUILD = discord.Object(config ["SERVER_ID"])
 
 class DiscordBot(commands.Bot):
     def __init__(self) -> None:
         super().__init__(
-            command_prefix=commands.when_mentioned_or(config["prefix"]),
+            command_prefix=(config["prefix"]),
             intents=intents,
             help_command=None,
         )
@@ -87,7 +83,6 @@ class DiscordBot(commands.Bot):
         """
         self.logger = logger
         self.config = config
-
 
     async def load_cogs(self) -> None:
         """
@@ -121,7 +116,6 @@ class DiscordBot(commands.Bot):
             
             self.tree.copy_global_to(guild=MY_GUILD)
             await self.tree.sync(guild=MY_GUILD)
-
 
 
 
